@@ -37,7 +37,7 @@ func GetMarketOrders() {
 		},
 	}
 	for _, request := range requests {
-		result, err := DoRequest(request.method, request.url)
+		result, err := DoRequest(request.method, request.url, nil, nil)
 		if err != nil {
 			panic(err)
 		}
